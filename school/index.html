@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Danh sách Học sinh</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row bg-info text-white pt-2">
+            <div class="col-md-12">
+                <h3 class="text-white" style="cursor: pointer;" onclick="window.location='../.'">
+                    <i class="fa fa-home" aria-hidden="true"></i> Trường Trung học Cơ sở XYZ
+                </h3>
+                <h5 class="h4 text-center" id="tieuDe">Điểm danh Học sinh - </h5>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid sticky-top bg-light pt-2">
+        <div style="margin-top: 5px;">
+            <button class="btn btn-sm btn-success" onclick="bieudoKhoi()">Thống kê Học sinh Khối</button>
+            <button class="btn btn-sm btn-success">Thống kê Học sinh Khối - Lớp</button>
+            <div id="thBieudo"
+                style="padding:0px; margin-top:5px; margin-bottom: 5px; width:100%;visibility: hidden;border:1px solid chocolate;">
+            </div>
+            <hr>
+            <label>Chọn Khối:</label>
+            <select id="chonKhoi"></select>
+            <label>Chọn Lớp:</label>
+            <select id="chonLop"></select>
+            <label> </label>
+            <input type="text" id="Th_Tim" placeholder="Tìm học sinh theo Tên" onkeyup="KeyCode(event)">
+
+            <button id="ghiNhan" class="btn btn-sm btn-outline-danger float-right">Ghi nhận</button>
+        </div>
+        <hr class="my-2 bg-white">
+    </div>
+    <div class="container-fluid">
+        <div class="row pt-2">
+            <div class="col-md-12 table-responsive" id="Th_Cha"></div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+    <button type="button" id="modalShow" class="btn btn-primary btn-lg d-none" data-toggle="modal"
+        data-target="#modelId">
+        Launch
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header btn-danger text-white">
+                    <h5 class="modal-title " id="modalTitle">sm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="xuLy/Xu_ly_3L.js"></script>
+    <script src="xuLy/xlHocsinh.js"></script>
+    <script src="xuLy/xlChart.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Cửa hàng Thu Trân</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./san-pham.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;" id="spinner" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <div id="mainContainer" style="visibility:hidden;">
+        <div class="fixed-top text-right mr-4" style="margin-top:5rem ;" id="Th_Mua_hang"
+            onclick="window.location='../gio-hang/.'">
+            <span class="text-white bg-danger btn border border-danger">
+                <u id="Th_Gio_hang">0</u>
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!--Header-->
+        <div class="container-fluid bg-light">
+            <div class="row pt-2">
+                <div id="header" class="col-12 col-md-2 col-xl-2 text-center align-content-center justify-content-center display-3">
+                    <img src="../images/PET.png" class="img-fluid hinh">
+                </div>
+                <div class="col-10 col-md-10 col-xl-10">
+                    <h1 class="mb-0 text-primary text-center">Cửa hàng Thu Trân</h1>
+                    <blockquote class="blockquote" style="text-align: center;">
+                        
+                        <footer class="blockquote-footer"> <cite title="Source Title">Phục vụ Quí khách 24/7</cite>
+                        </footer>
+                        <footer class="blockquote-footer"> <cite title="Source Title">
+                                <i class="fa fa-home" aria-hidden="true"></i> : 137E Nguyễn Chí Thanh P4 Quận 5 Tp Hồ
+                                Chí
+                                Minh</cite>
+                        </footer>
+                        <footer class="blockquote-footer"> <cite title="Source Title">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i> : admin@thutran.com -
+                                <i class="fa fa-phone" aria-hidden="true"></i>: <a href="tel:08 777 6666">08 777
+                                    6666</a>
+                            </cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <!--Menu navbar-light bg-light-->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+            <a class="navbar-brand" href="../.">Home</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javaScript:void(0)" id="All" data-toggle="collapse" data-target=".navbar-collapse.show" >
+                            <i class="fa fa-list-ul" aria-hidden="true"></i> Discount Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javaScript:void(0)" id="Mobiles" data-toggle="collapse" data-target=".navbar-collapse.show" >
+                            <i class="fa fa-apple" aria-hidden="true"></i> Mobiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javaScript:void(0)" id="Tivis" data-toggle="collapse" data-target=".navbar-collapse.show" >
+                            <i class="fa fa-television" aria-hidden="true"></i> Tivis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javaScript:void(0)" id="Foods" data-toggle="collapse" data-target=".navbar-collapse.show" >
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Foods</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javaScript:void(0)" id="Contact" data-toggle="collapse" data-target=".navbar-collapse.show" >
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i> Contact</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                    </div>
+                </li> -->
+                </ul>
+                <form class="form-inline my-2 my-lg-0" onsubmit="return false">
+                    <input class="form-control mr-sm-2" type="text" onkeyup="KeyCode(event)" placeholder="Search"
+                        id="gtTim">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="Tim">Search</button>
+                </form>
+            </div>
+        </nav>
+        <!--Content-->
+
+        <div class="container-fluid bg-light">
+            <div class="row p-1">
+                <div class="col-12 col-md-3 col-xl-3">
+                    <div id="chuDeLeft"></div>
+                    <h3 class="bg-info text-white p-2 mt-2">Sản phẩm Bán chạy</h3>
+                    <div id="carouselId" class="carousel slide text-center" data-ride="carousel"></div>
+                </div>
+                <div class="col-12 col-md-9 col-xl-9">
+                    <div class="row" id="Th_dsDienthoai"></div>
+                    <div class="row" id="Th_dsTivi"></div>
+                    <div class="row" id="Th_dsMathang"></div>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        <div class="container-fluid bg-dark text-white-50">
+            <div class="row">
+                <div class="col-12 p-3 text-center">
+                    <script>
+                        let d = new Date();
+                        let html = `&COPY; ${d.getFullYear()} Designer Lập trình viên javaScript`;
+                        document.write(html);
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <!-- Button trigger modal -->
+    <button id="showModal" type="button" class="btn btn-primary btn-lg d-none" data-toggle="modal"
+        data-target="#modelId">
+        Launch
+    </button>
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary" id="modalTitle">Modal title</h5>
+                    <button type="button" id="Th_Close" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    Body
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/home.js"></script>
+</body>
+
+</html>

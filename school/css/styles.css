@@ -1,0 +1,23 @@
+html,
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+        }
+
+        label {
+            color: chocolate;
+            font-weight: 800;
+
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid gray;
+        }
+
+        input[type="text"] {
+            border: 1px solid transparent;
+            border-bottom-color: gray;
+            width: 20rem;
+        }
